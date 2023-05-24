@@ -101,7 +101,7 @@ function displayPokemon(pokemon) {
     let pokeBox = document.createElement("div");
   
     pokeBox.innerHTML = `
-      <h2 class="pokeTitle>${pokemon.name}</h2>
+      <h2 class="pokeTitle"><a herf = "https://www.pokemon.com/us/pokedex/${pokemon.name}">${pokemon.name}</a></h2>
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" class="pokeImage">
       `;
       
