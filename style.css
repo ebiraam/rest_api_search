@@ -1,5 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+  }
 
-  /* CSS-tyylit */
+  h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+
+  #search {
+    padding: 10px;
+    width: 300px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+  }
+
+  #searchBtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  #pokeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .pokeBox {
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .pokeBox:hover {
+    transform: scale(1.05);
+  }
+
   .pokeTitle {
     font-size: 24px;
     font-weight: bold;
@@ -11,18 +66,7 @@
     height: 200px;
     margin-bottom: 20px;
   }
-
-  #pokeList {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  #pokeList > div {
-    margin: 10px;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
+  form {
     text-align: center;
   }
-
+  /* cant add more than 8 pokemos */

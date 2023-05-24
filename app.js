@@ -94,7 +94,7 @@ function displayPokemon(pokemon) {
     // Tarkista, onko Pokemon jo näytetty
     const isDisplayed = displayList.some((p) => p.id === pokemon.id);
     if (isDisplayed) {
-      alert("Already displayed:", pokemon.name);
+// alert("Already displayed:", pokemon.name);
       return;
     }
   
@@ -104,15 +104,16 @@ function displayPokemon(pokemon) {
       <h2 class="pokeTitle">${pokemon.name}</h2>
       <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png" class="pokeImage">
       `;
+      
   
     document.getElementById("pokeList").appendChild(pokeBox);
   
-    // Lisää Pokemon displayListiin
+   
     displayList.push(pokemon);
     localStorage.setItem("displayList", JSON.stringify(displayList));
   }
   
-  // ...
+
   
   
 
@@ -129,3 +130,28 @@ async function getAllPokemonData() {
 }
 
 getAllPokemonData();
+
+
+async function getAllPokemonNames() {
+    try {
+      const response = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=1000");
+      const data = await response.json();
+  
+      const pokemonNames = data.results.map((pokemon) => pokemon.name);
+      const datalist = document.getElementById("pokemonNames");
+  
+      pokemonNames.forEach((name) => {
+        const option = document.createElement("option");
+        option.value = name;
+        datalist.appendChild(option);
+      });
+    } catch (error) {
+      console.log("API-kutsu epäonnistui:", error);
+    }
+  }
+  
+  
+  getAllPokemonNames();
+  
+
+  
