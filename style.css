@@ -1,7 +1,28 @@
-.pokeTitle {
-    font-size: 50px;
-}
 
-.pokeImage {
-    width: 250px;
-}
+  /* CSS-tyylit */
+  .pokeTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .pokeImage {
+    width: 200px;
+    height: 200px;
+    margin-bottom: 20px;
+  }
+
+  #pokeList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #pokeList > div {
+    margin: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    text-align: center;
+  }
+
